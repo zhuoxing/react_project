@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import RouterIndex from './router/index'
+import CommHeader from './view/comm/comm-header';
+import CommFooter from './view/comm/comm-footer';
+import './view/index.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='pageWrap'>
+        <CommHeader/>
+        <div className='main'>
+          <RouterIndex/>  
+        </div>
+        <CommFooter/>
       </div>
     );
   }
 }
-
 export default App;
