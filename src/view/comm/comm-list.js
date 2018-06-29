@@ -4,9 +4,11 @@ import {List,Avatar,Tag} from 'antd';
 import data from '../../data/data'
 import Item from 'antd/lib/list/Item';
 import CommTag from '../comm/comm-tag';
-export default class IndexList extends Component{
+import {connect} from 'react-redux';
+class IndexList extends Component{
     render(){
         console.log(data)
+        console.log(this.props)
         return(
             <List loading={false}
                 dataSource={data.data}
@@ -30,3 +32,4 @@ export default class IndexList extends Component{
         )
     }
 }
+export default connect(state =>state.indexList)(IndexList)
